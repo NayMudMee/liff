@@ -36,7 +36,7 @@
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
-  <!-- <script src="js/vconsole.min.js"></script> -->
+   <script src="js/vconsole.min.js"></script> 
   <!-- <script>
     var vConsole = new VConsole()
     console.log("Hello World!")
@@ -75,12 +75,24 @@
     }
 
     function getEnvironment() {
+      document.getelementById("os").append(liff.getOS())
+      document.getElementByID("language").append(liff.getLanguage())
+      document.getElementByID("Version").append(liff.getVersion())
+      document.getElementByID("accessToken").append(liff.getAccessToken())
+      document.getElementByID("isInClient").append(liff.getisInClient())
+      if (liff.isInClient()) {
+        document.getElementByID("btnLogOut").style.display = "none"
+      } else {
+        document.getElementByID("btnMsg").sytle.display = "none"
+        document.getElementByID("btnScanCode").sytle.display = "none"
+        document.getElementByID("btnClose").sytle.display = "none"
+      }
     }
 
     async function main() {
       alert("LINE Developers x Skooldio")
-      await liff.init({ liffId: "YOUR-LIFF-ID" })
-      // getEnvironment()
+      await liff.init({ liffId: "1656794577-qm32wgl0" })
+       getEnvironment()
       // getUserProfile()
       // getContext()
       // getFriendship()
