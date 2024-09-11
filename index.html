@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>OTOP PRODUCT CHAMPION</title>
+  <title>บันทึกวัน เดือน ปีเกิด</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -30,11 +30,10 @@
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="liff/path/?param=9">Link to Path</a></p>  
 
-  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
-  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
-  <button onclick="openWindow()">Open Window</button>
-  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <label for="birthdaytime">วันเกิด (วันและเวลา):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+
+  <button id="btnLogOut" onclick="logOut()">บันทึก</button>
   <button id="btnClose" onclick="closed()">Close</button>
 
   <script src="js/vconsole.min.js"></script>
