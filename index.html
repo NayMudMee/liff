@@ -1,47 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Data Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+  <title>My LIFF app</title>
+  <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-    <h1>Enter User Data</h1>
-    
-    <form id="userForm">
-        <label for="userid">User ID:</label>
-        <input type="text" id="userid" required><br><br>
+  <p id="os"><b>OS:</b> </p>
+  <p id="language"><b>Language:</b> </p>
+  <p id="version"><b>Version:</b> </p>
+  <p id="isInClient"><b>isInClient:</b> </p>
+  <p id="accessToken"><b>AccessToken:</b> </p>
+  <img id="pictureUrl">
+  <p id="userId"><b>userId:</b> </p>
+  <p id="displayName"><b>displayName:</b> </p>
+  <p id="statusMessage"><b>statusMessage:</b> </p>
+  <p id="decodedIDToken"><b>email:</b> </p>
+  <p id="type"><b>type:</b> </p>
+  <p id="viewType"><b>viewType:</b> </p>
+  <p id="utouId"><b>utouId:</b> </p>
+  <p id="roomId"><b>roomId:</b> </p>
+  <p id="groupId"><b>groupId:</b> </p>
+  <p id="friendship"><b>isFriendship:</b> </p>
+  <p id="scanCode"><b>Code:</b> </p>
+  <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
+  <p id="universalLink1"><b>Universal Link:</b> </p>
+  <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
+  <p><a href="liff/path/?param=9">Link to Path</a></p>
 
-        <label for="name">Name:</label>
-        <input type="text" id="name" required><br><br>
+  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+  <button onclick="openWindow()">Open Window</button>
+  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <button id="btnClose" onclick="closed()">Close</button>
 
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" required><br><br>
+  <!-- <script src="js/vconsole.min.js"></script> -->
+  <!-- <script>
+    var vConsole = new VConsole()
+    console.log("Hello World!")
+  </script> -->
 
-        <button type="submit">Submit</button>
-    </form>
+  <-- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> -->
+  <script>
+    function createUniversalLink() {
+    }
 
-    <br>
-    <button id="showData">Show Data</button>
+    async function shareMsg() {
+    }
 
-    <div id="tableContainer">
-        <h2>Saved Data</h2>
-        <table id="dataTable" border="1">
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>Name</th>
-                    <th>Birthday</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data rows will be appended here -->
-            </tbody>
-        </table>
-    </div>
+    function logOut() {
+    }
 
-    <p id="message"></p>
+    function closed() {
+    }
 
-    <script src="js/script.js"></script>
+    async function scanCode() {
+    }
+
+    function openWindow() {
+    }
+
+    async function getFriendship() {
+    }
+
+    async function sendMsg() {
+    }
+
+    function getContext() {
+    }
+
+    async function getUserProfile() {
+    }
+
+    function getEnvironment() {
+    }
+
+    async function main() {
+      alert("LINE Developers x Skooldio")
+      await liff.init({ liffId: "YOUR-LIFF-ID" })
+      // getEnvironment()
+      // getUserProfile()
+      // getContext()
+      // getFriendship()
+      // createUniversalLink()
+    }
+    main()
+  </script>
 </body>
 </html>
